@@ -10,3 +10,31 @@ Route::get('/', function () {
     return 'Homepage';
     //affiche dans localhost "homepage"
 }); 
+
+### Relier un texte avec l'id à une URL:
+
+Route::get('/user/{id}', function ($id) {
+    return 'User '.$id;
+});
+
+## Créer un controller
+
+__Aller sur la commande de vs code__
+
+php artisan make:controller (nm controlleur)
+
+-sur page controller: 
+
+(ex) class CartController extends Controller
+{
+    //
+    function cart(){
+        return "Panier";
+    }
+}
+
+-sur web.php:
+
+(ex) Route::get('/home', [HomeController::class,"home"] );
+
+
