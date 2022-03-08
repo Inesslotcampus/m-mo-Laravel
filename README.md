@@ -17,7 +17,7 @@ Route::get('/user/{id}', function ($id) {
     return 'User '.$id;
 });
 
-## Créer un controller
+### Créer un controller
 
 __Aller sur la commande de vs code__
 
@@ -37,7 +37,7 @@ php artisan make:controller (nm controlleur)
 
 (ex) Route::get('/home', [HomeController::class,"home"] );
 
-##view
+### View
 
 - page view : txt php
 - page controller 
