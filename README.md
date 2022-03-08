@@ -37,4 +37,13 @@ php artisan make:controller (nm controlleur)
 
 (ex) Route::get('/home', [HomeController::class,"home"] );
 
+##view
+
+- page view : txt php
+- page controller 
+
+(ex)function cart(){
+        return view("cart");
+    }
+
 
