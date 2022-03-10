@@ -47,3 +47,47 @@ php artisan make:controller (nm controlleur)
     }
 
 
+## Formulaire
+
+__2 view, un avec le formulaire et un avec la réponse.__
+
+### -view formulaire : @extends('template')
+
+@section('content')
+
+(formulaire html )
+
+@endsection
+
+
+### -réponse : (ex)
+
+ @extends('template')
+
+@section('content')
+
+<h3>Firstname</h3>
+
+            <p>valeur : <b>{{ $user['firstname'] }}</b></p>
+            
+
+@endsection
+
+## Controller (ex) 
+
+  public function store(Request $request)
+    {
+        $data = [
+            'user' => [
+                'firstname' => $request->input('firstname'),
+                'lastname' => $request->input('lastname'),
+                'gender' => $request->input('gender'),
+                'newsletter' => $request->input('newsletter'),
+                'mood' => $request->input('mood'),
+            ],
+        ];
+
+        return view('user.result', $data);
+
+    }
+
