@@ -56,6 +56,7 @@ __2 view, un avec le formulaire et un avec la réponse.__
 @section('content')
 
 (formulaire html )
+{{ csrf_field() }}
 
 @endsection
 
@@ -81,9 +82,7 @@ __2 view, un avec le formulaire et un avec la réponse.__
             'user' => [
                 'firstname' => $request->input('firstname'),
                 'lastname' => $request->input('lastname'),
-                'gender' => $request->input('gender'),
-                'newsletter' => $request->input('newsletter'),
-                'mood' => $request->input('mood'),
+                
             ],
         ];
 
