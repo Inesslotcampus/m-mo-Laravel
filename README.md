@@ -51,12 +51,15 @@ php artisan make:controller (nm controlleur)
 
 __2 view, un avec le formulaire et un avec la réponse.__
 
+
+CSRF=
+
 ### -view formulaire : @extends('template')
 
 @section('content')
 
 (formulaire html )
-{{ csrf_field() }}
+{{ csrf_field() }} //obligatoir sinon ça marche pas. protection
 
 @endsection
 
