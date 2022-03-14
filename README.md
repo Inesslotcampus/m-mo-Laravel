@@ -93,3 +93,16 @@ CSRF=
 
     }
 
+## Model
+
+- Création model:
+
+__php artisan make:model Flight__
+
+- database migration:
+
+__php artisan make:model Flight --migration__
+
+- primary key
+
+__protected $primaryKey = 'flight_id';__
