@@ -97,12 +97,24 @@ CSRF=
 
 - Création model:
 
-__php artisan make:model Flight__
+__php artisan make:model Table__
+(maj pour la table)
 
 - database migration:
 
-__php artisan make:model Flight --migration__
+__php artisan make:model Table --migration__
 
 - primary key
 
-__protected $primaryKey = 'flight_id';__
+__protected $primaryKey = 'table_id';__
+
+
+- Building Queries
+
+__$productcs = Products::where('champ', valeurQueTuVeux)
+
+               ->orderBy('name')
+               
+               ->take(10)
+               
+               ->get();
