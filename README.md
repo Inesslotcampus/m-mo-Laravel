@@ -108,9 +108,13 @@ __php artisan make:model Table --migration__
 
 __protected $primaryKey = 'table_id';__
 
+protected $table="product";
+
 
 - Building Queries
 
+- Dans controller
+- 
 __$productcs = Products::where('champ', valeurQueTuVeux)
 
                ->orderBy('name')
