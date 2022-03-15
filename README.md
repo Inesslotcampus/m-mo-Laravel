@@ -3,19 +3,37 @@
 
 ## Routage 
 __ Déclarer une route permet de lier une URI (identifiant de ressource uniforme, autrement dit la partie de l’adresse qui suit le nom de domaine) à un code à exécuter. Le routage est un moyen de créer une URL de requête pour votre application. (A faire dans route/web.php)__
+__URI: L'URI est un identifiant.__
 
-### Relier un texte à une URL:
+__URL: L'URL fournit des informations sur l'obtention d'une ressource..__
 
-Route::get('/', function () {
+
+
+### Routage :Relier un texte à une URL:
+
+- Route::get('/', function () {
     return 'Homepage';
     //affiche dans localhost "homepage"
 }); 
 
-### Relier un texte avec l'id à une URL:
+- Relier un texte avec l'id à une URL:
 
 Route::get('/user/{id}', function ($id) {
     return 'User '.$id;
 });
+
+- Route::ressources mix de plusieurs actions
+    - Get -> index
+    - Get -> create
+    - post -> store
+    - Get -> show 
+    - Get -> edit
+    - put/patch -> update 
+    - delete -> destroy 
+
+Route::resource('photos', PhotoController::class);
+
+
 
 ### Créer un controller
 
