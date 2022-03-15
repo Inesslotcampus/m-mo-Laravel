@@ -122,3 +122,37 @@ __$productcs = Products::where('champ', valeurQueTuVeux)
                ->take(10)
                
                ->get();
+               
+               
+               
+               
+### Step 6 : création d'une selection entre l'ordre croissant des prix et de noms
+
+-Route:
+
+Route::post('/product/sort', [ProductController::class,"store"]);
+
+-controller: 
+
+ public function store(Request $request)
+    {
+        
+        if ($request->input('product'//nom de mon select) == 'name') {
+            $product = Product::where('available', 1)
+
+                ->orderBy('name')
+                ->get();
+
+
+            return view('product-list', ['products' => $product]);
+        } else {
+            $product = Product::where('available', 1)
+
+                ->orderBy('price')
+                ->get();
+
+
+            return view('product-list', ['products' => $product]);
+        }
+    }
+}
