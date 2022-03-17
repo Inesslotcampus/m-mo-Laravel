@@ -2,6 +2,18 @@
 
 schéma Laravel: https://miro.medium.com/max/1400/1*Vu2ThQPxr72UEOP0LMo4hA.jpeg
 
+GET
+La méthode GET demande une représentation de la ressource spécifiée. Les requêtes GET doivent uniquement être utilisées afin de récupérer des données.
+
+POST
+La méthode POST est utilisée pour envoyer une entité vers la ressource indiquée. Cela entraîne généralement un changement d'état ou des effets de bord sur le serveur.
+
+PUT
+La méthode PUT remplace toutes les représentations actuelles de la ressource visée par le contenu de la requête.
+
+DELETE
+La méthode DELETE supprime la ressource indiquée.
+
 ## Routage 
 __ Déclarer une route permet de lier une URI (identifiant de ressource uniforme, autrement dit la partie de l’adresse qui suit le nom de domaine) à un code à exécuter. Le routage est un moyen de créer une URL de requête pour votre application. (A faire dans route/web.php)__
 __URI: L'URI est un identifiant.__
