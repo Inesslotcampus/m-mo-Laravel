@@ -2,6 +2,16 @@
 
 schéma Laravel: https://miro.medium.com/max/1400/1*Vu2ThQPxr72UEOP0LMo4hA.jpeg
 
+cloner un projet:
+
+- changer la variable locale pour mêttre une bonne version au projet
+- npm installl
+- composer install (si pb d'identification avec laraform avec l'user = composer config --global --editor -auth puis modifier en fonction htt-basic)
+-  cp .env.example .env
+-   php artisan key:generate
+-   php artisan migrate
+-   php artisan serve
+
 GET
 La méthode GET demande une représentation de la ressource spécifiée. Les requêtes GET doivent uniquement être utilisées afin de récupérer des données.
 
