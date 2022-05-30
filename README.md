@@ -32,6 +32,7 @@ __URL: L'URL fournit des informations sur l'obtention d'une ressource..__
 
 
 
+
 ### Routage :Relier un texte à une URL:
 
 - Route::get('/', function () {
@@ -165,6 +166,15 @@ __$productcs = Products::where('champ', valeurQueTuVeux)
                ->take(10)
                
                ->get();
+               
+               
+                
+## ajouter une bdd
+
+- donner un nom à une nouvelle bdd
+- changer dans le dossier .env le nom de la bdd
+- taper dans la console : php migrate
+
                
                
                
