@@ -60,6 +60,8 @@ Route::resource('photos', PhotoController::class);
 
 ### Créer un controller
 
+__les controllers sont dispo dans app/http/Controllers__
+
 __Aller sur la commande de vs code__
 
 php artisan make:controller (nm controlleur)
